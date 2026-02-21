@@ -23,11 +23,11 @@ ContrastLens is a fun Python projects that converts any photograph into a high c
 
 ## How It Works
 
-1. **Luminance extraction** — The input image is converted to a single-channel float luminance map in `[0, 1]`.
-2. **Adaptive contrast expansion** — Pixel values are stretched away from the midpoint (0.5) by a configurable gain factor, boosting separation between tones.
-3. **Probability mapping** — Each pixel's luminance is inverted to a sampling probability: dark pixels get a high probability of becoming black; near-white pixels are clamped to zero probability (guaranteed white).
-4. **Stochastic sampling** — A random draw is made per pixel against its probability, producing a binary mask.
-5. **Output** — The mask is mapped to a pure black-and-white image (0 or 255).
+1. **Luminance extraction** : The input image is converted to a single-channel float luminance map in `[0, 1]`.
+2. **Adaptive contrast expansion** : Pixel values are stretched away from the midpoint (0.5) by a configurable gain factor.
+3. **Probability mapping** : Each pixel's luminance is inverted to a sampling probability
+4. **Stochastic sampling** : A random draw is made per pixel against its probability, producing a binary mask.
+5. **Output** : The mask is mapped to a pure black-and-white image (0 or 255).
 
 The two modes control the strength of the contrast gain:
 
@@ -65,12 +65,12 @@ The two modes control the strength of the contrast gain:
 
 **Step by step guide**
 1. Load an image with the **Load Image** button (supports JPEG, PNG, BMP)
-2. Pick a rendering mode — **Low Contrast** or **High Contrast**
+2. Pick a rendering mode : **Low Contrast** or **High Contrast**
 3. Adjust the **Contrast** slider to dial in the effect intensity
 4. Hold the canvas with the **left mouse button** to compare against the original
 5. Save the result with the **Save Image** button
 
 > [!IMPORTANT]
-> Each slider or mode change re-renders the image live — no update button needed.
+> Each slider or mode change re-renders the image live.
 
 ---
